@@ -2,10 +2,9 @@ version: "3"
 
 services:
   app:
-    image: node:latest
+    build: .
+    command: yarn start:dev
     ports:
       - "3000:3000"
-    working_dir: "/home/node/app"
     volumes:
-      - .:/home/node/app
-    command: bash -c "yarn install && yarn start:dev"
+      - .:/usr/app
