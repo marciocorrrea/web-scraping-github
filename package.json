@@ -1,0 +1,30 @@
+{
+  "name": "web-scraping",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "module": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start:prod": "node  ./src/app.js",
+    "start:dev": "nodemon  ./src/app.js",
+    "dev": "docker-compose up",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js -i --forceExit"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsdom": "^16.5.3"
+  },
+  "jest": {
+    "verbose": true,
+    "automock": false,
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "nodemon": "^2.0.7",
+    "supertest": "^6.1.3"
+  }
+}
